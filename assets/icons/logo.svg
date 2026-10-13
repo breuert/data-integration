@@ -1,0 +1,2 @@
+<!-- Based on the "arrows-join" icon from Tabler Icons (https://tabler.io/icons), MIT License, see LICENSE-TablerIcons.txt. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="1" y="1" width="30" height="30" rx="7" fill="#16273E"/><g transform="translate(16 16) scale(1.2) translate(-12 -12)" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h5l3.5 5" stroke="#B6C1D2"/><path d="M3 17h5l3.495-5" stroke="#B6C1D2"/><path d="M11.5 12h9.5M18 15l3-3-3-3" stroke="#FF9E8A"/></g></svg>

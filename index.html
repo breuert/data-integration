@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Integration · Winter 2026/27</title>
+<meta name="description" content="DIS 3.3 Data Integration, Winter 2026/27, Data and Information Science, TH Köln: schedule, slides, labs, group project and milestones.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DIS 3.3 · Data Integration · Winter 2026/27">
+<meta property="og:description" content="Schedule, slides, labs, group project and milestones of the BSc course Data Integration at TH Köln.">
+<meta property="og:url" content="https://breuert.github.io/data-integration/">
+<meta name="theme-color" content="#0D1B2E">
+<!-- Logo and favicon: based on "arrows-join" from Tabler Icons (MIT License, see assets/icons/). -->
+<link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+<link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Fonts are served from this repository (SIL Open Font License, see assets/fonts/). */
+  @font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("assets/fonts/fraunces-900-latin.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Instrument Sans";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("assets/fonts/instrument-sans-latin.woff2") format("woff2");
+  }
+
+  /* Colours of the lecture slides: navy, paper, coral, blue. */
+  :root {
+    color-scheme: light;
+    --navy: #0D1B2E;
+    --navy-2: #16273E;
+    --navy-3: #1D3049;
+    --on-navy: #F2F0EA;
+    --on-navy-2: #B6C1D2;
+    --coral: #FF9E8A;
+
+    --bg: #F2F0EA;
+    --surface: #FFFFFF;
+    --rule: #E7E1D2;
+    --text: #0D1B2E;
+    --text-2: #46546A;
+    --text-3: #5F6E80;
+    --accent: #A84A35;
+    --accent-mark: #C25A43;
+    --link: #3D6BA8;
+    --chip-bg: #FBE3DC;
+    --chip-text: #8A3A28;
+    --row-next: #FFF6F2;
+    --shadow: 0 1px 2px rgba(13, 27, 46, .06), 0 8px 24px rgba(13, 27, 46, .06);
+
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Instrument Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0D1B2E;
+      --surface: #16273E;
+      --rule: #2A3D57;
+      --text: #F2F0EA;
+      --text-2: #B6C1D2;
+      --text-3: #9AA8BA;
+      --accent: #FF9E8A;
+      --accent-mark: #FF9E8A;
+      --link: #8FB3E8;
+      --chip-bg: #3A2A2E;
+      --chip-text: #FFBCA8;
+      --row-next: #1D3049;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0D1B2E;
+    --surface: #16273E;
+    --rule: #2A3D57;
+    --text: #F2F0EA;
+    --text-2: #B6C1D2;
+    --text-3: #9AA8BA;
+    --accent: #FF9E8A;
+    --accent-mark: #FF9E8A;
+    --link: #8FB3E8;
+    --chip-bg: #3A2A2E;
+    --chip-text: #FFBCA8;
+    --row-next: #1D3049;
+    --shadow: none;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; border-radius: 4px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 720px) { .wrap { padding: 0 32px; } }
+
+  .skip {
+    position: absolute; left: 16px; top: -48px; z-index: 10;
+    background: var(--coral); color: var(--navy); padding: 8px 14px; border-radius: 6px;
+    font-weight: 600; text-decoration: none;
+  }
+  .skip:focus { top: 12px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; overflow: hidden;
+    background: var(--navy); color: var(--on-navy);
+    padding-bottom: 72px;
+  }
+  .hero::before, .hero::after {
+    content: ""; position: absolute; border-radius: 50%; pointer-events: none; filter: blur(8px);
+  }
+  .hero::before {
+    width: 620px; height: 620px; right: -160px; top: -220px;
+    background: radial-gradient(circle at center, rgba(255, 158, 138, .30), rgba(255, 158, 138, 0) 65%);
+  }
+  .hero::after {
+    width: 560px; height: 560px; right: 80px; bottom: -320px;
+    background: radial-gradient(circle at center, rgba(79, 134, 217, .30), rgba(79, 134, 217, 0) 65%);
+  }
+  .hero-dots {
+    position: absolute; inset: 0; pointer-events: none; opacity: .5;
+    background-image: radial-gradient(rgba(182, 193, 210, .22) 1px, transparent 1.2px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(100deg, transparent 35%, #000 85%);
+            mask-image: linear-gradient(100deg, transparent 35%, #000 85%);
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 20px 0;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--on-navy); text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: .02em;
+  }
+  .brand svg { width: 28px; height: 28px; flex: none; }
+  .topnav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+  .topnav a {
+    color: var(--on-navy-2); text-decoration: none; font-size: 15px; font-weight: 500;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  .topnav a:hover { color: var(--on-navy); background: rgba(255, 255, 255, .06); }
+  .topnav .gh { display: inline-flex; align-items: center; gap: 6px; color: var(--on-navy); }
+  .topnav .gh svg { width: 18px; height: 18px; }
+  @media (max-width: 719px) { .topnav .section-link { display: none; } }
+
+  .hero-grid { display: grid; gap: 40px; padding-top: 48px; }
+  @media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1fr) 340px; align-items: end; padding-top: 72px; } }
+
+  .kicker {
+    margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .hero .kicker { color: var(--coral); }
+  h1 {
+    margin: 0; font-family: var(--serif); font-weight: 900;
+    font-size: clamp(44px, 9vw, 92px); line-height: .98; letter-spacing: -.015em;
+  }
+  h1 .dot { color: var(--coral); }
+  .tagline { margin: 18px 0 0; font-family: var(--serif); font-weight: 900; font-size: clamp(22px, 3.2vw, 30px); line-height: 1.2; color: var(--on-navy-2); }
+  .meta { margin: 22px 0 0; color: var(--on-navy-2); font-size: 15px; }
+  .meta strong { color: var(--on-navy); font-weight: 600; }
+  .lead { margin: 22px 0 0; max-width: 62ch; color: var(--on-navy); font-size: 18px; line-height: 1.6; }
+  .lead strong { color: #fff; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 8px; font-weight: 600; font-size: 16px; text-decoration: none;
+    border: 1px solid transparent;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-primary { background: var(--coral); color: var(--navy); }
+  .btn-primary:hover { background: #FFB3A3; }
+  .btn-ghost { color: var(--on-navy); border-color: rgba(182, 193, 210, .35); }
+  .btn-ghost:hover { background: rgba(255, 255, 255, .06); border-color: rgba(182, 193, 210, .6); }
+
+  .next-card {
+    background: rgba(22, 39, 62, .82); border: 1px solid rgba(182, 193, 210, .18);
+    border-radius: 14px; padding: 22px 22px 20px;
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  }
+  .next-card[hidden] { display: none; }
+  .next-label { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--coral); }
+  .next-date { margin: 0; color: var(--on-navy-2); font-size: 15px; }
+  .next-topic { margin: 4px 0 0; font-family: var(--serif); font-weight: 900; font-size: 24px; line-height: 1.2; color: var(--on-navy); }
+  .next-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .next-links:empty { display: none; }
+  .next-card .res { background: var(--navy-3); color: var(--on-navy); border-color: rgba(182, 193, 210, .25); }
+  .next-card .res:hover { border-color: var(--coral); }
+  .next-milestone { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(182, 193, 210, .18); font-size: 15px; color: var(--on-navy-2); }
+  .next-milestone strong { color: var(--on-navy); font-weight: 600; }
+  .next-milestone .diamond { color: var(--coral); }
+
+  /* ---------- Sections ---------- */
+  main section { padding: 72px 0 0; scroll-margin-top: 8px; }
+  main section:last-child { padding-bottom: 88px; }
+  h2 {
+    margin: 0; font-family: var(--serif); font-weight: 900;
+    font-size: clamp(30px, 4.4vw, 42px); line-height: 1.1; letter-spacing: -.01em;
+  }
+  .section-intro { margin: 14px 0 0; max-width: 68ch; color: var(--text-2); }
+  p { margin: 0; }
+
+  /* ---------- Schedule ---------- */
+  .table-card {
+    margin-top: 32px; background: var(--surface); border: 1px solid var(--rule); border-radius: 14px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    text-align: left; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-3); padding: 14px 20px; border-bottom: 1px solid var(--rule);
+  }
+  td { padding: 14px 20px; border-top: 1px solid var(--rule); vertical-align: top; }
+  tbody tr:first-child td { border-top: 0; }
+  .col-date { width: 140px; white-space: nowrap; }
+  .col-res { width: 350px; }
+  .col-ms { width: 190px; }
+  .date { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .weekday { display: block; color: var(--text-3); font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; }
+  .topic { font-weight: 600; }
+  .na { color: var(--text-3); }
+
+  tr.block td {
+    background: var(--bg); padding: 22px 20px 10px; border-top: 1px solid var(--rule);
+  }
+  .block-num { display: block; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  .block-title { display: block; margin-top: 2px; font-family: var(--serif); font-weight: 900; font-size: 21px; line-height: 1.25; }
+  .block-range { color: var(--text-3); font-size: 14px; font-weight: 500; }
+
+  .res-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .res-stack { flex-direction: column; align-items: flex-start; }
+  .res {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 11px; border-radius: 999px; border: 1px solid var(--rule);
+    background: var(--bg); color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.3;
+    white-space: nowrap;
+  }
+  .res:hover { border-color: var(--accent-mark); }
+  .res svg { width: 15px; height: 15px; flex: none; }
+  .res .ic-slides { color: var(--accent-mark); }
+  .res .ic-lab { color: var(--link); }
+  .res small { font-weight: 500; color: var(--text-3); font-size: 13px; }
+
+  .ms { display: inline-flex; gap: 8px; align-items: baseline; font-weight: 600; }
+  .ms .diamond { color: var(--accent-mark); font-size: 15px; }
+  .ms span:last-child { line-height: 1.35; }
+
+  .chip {
+    display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px; vertical-align: 2px;
+    background: var(--chip-bg); color: var(--chip-text); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  }
+  tr.is-past td:not(.keep) { color: var(--text-3); }
+  tr.is-past .topic { font-weight: 500; }
+  tr.is-next td { background: var(--row-next); }
+  tr.is-next td:first-child { box-shadow: inset 3px 0 0 var(--accent-mark); }
+
+  @media (max-width: 759px) {
+    table, tbody, tr, td { display: block; width: 100%; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    tr.session { position: relative; padding: 16px 16px 18px; border-top: 1px solid var(--rule); }
+    tr.session td { border: 0; padding: 0; background: transparent; width: auto; }
+    tr.session td + td { margin-top: 8px; }
+    tr.session td.col-date + td { margin-top: 2px; }
+    tr.session td:empty, tr.session td.empty-ms { display: none; }
+    .col-date .weekday { display: inline; margin-right: 6px; }
+    .col-date, .col-res, .col-ms { width: auto; }
+    tr.block td { padding: 20px 16px 10px; }
+    tbody tr:first-child { border-top: 0; }
+    tr.is-next { background: var(--row-next); box-shadow: inset 3px 0 0 var(--accent-mark); }
+    tr.is-next td:first-child { box-shadow: none; }
+  }
+
+  /* ---------- Group project ---------- */
+  .project-grid { display: grid; gap: 28px; margin-top: 32px; }
+  @media (min-width: 900px) { .project-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 48px; } }
+  .project-text p + p { margin-top: 14px; }
+  .project-text p { color: var(--text-2); }
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: step; }
+  .steps > li {
+    position: relative; counter-increment: step;
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; box-shadow: var(--shadow);
+    padding: 18px 20px 18px 68px;
+  }
+  .steps > li::before {
+    content: counter(step); position: absolute; left: 20px; top: 16px;
+    width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--navy); color: var(--coral); font-family: var(--serif); font-weight: 900; font-size: 17px;
+  }
+  .steps h3 { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.4; }
+  .steps p { margin-top: 6px; color: var(--text-2); font-size: 16px; }
+  .steps ul { margin: 8px 0 0; padding-left: 20px; color: var(--text-2); font-size: 16px; }
+  .steps ul li + li { margin-top: 4px; }
+  .note {
+    margin-top: 20px; padding: 16px 20px; border-radius: 12px;
+    border: 1px solid var(--rule); border-left: 4px solid var(--accent-mark); background: var(--surface);
+    color: var(--text-2); font-size: 16px;
+  }
+  .note strong { color: var(--text); }
+
+  /* ---------- Milestones ---------- */
+  .ms-grid { display: grid; gap: 18px; margin-top: 32px; }
+  @media (min-width: 900px) { .ms-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .ms-card {
+    display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; box-shadow: var(--shadow);
+    padding: 24px 24px 22px;
+  }
+  .ms-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .ms-num { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  .ms-when { font-size: 14px; color: var(--text-3); font-weight: 500; text-align: right; }
+  .ms-card h3 { margin: 10px 0 0; font-family: var(--serif); font-weight: 900; font-size: 30px; line-height: 1.1; }
+  .ms-date { margin-top: 6px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ms-summary { margin-top: 14px; color: var(--text-2); font-size: 16px; }
+  .ms-card h4 { margin: 18px 0 0; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); }
+  .ms-card ul { margin: 8px 0 0; padding-left: 20px; font-size: 16px; }
+  .ms-card ul li + li { margin-top: 5px; }
+  .ms-format { margin-top: 6px; font-size: 16px; }
+  .ms-extra {
+    margin-top: auto; padding-top: 18px;
+  }
+  .ms-extra p { padding: 12px 14px; border-radius: 10px; background: var(--bg); font-size: 15px; color: var(--text-2); }
+  .ms-extra strong { color: var(--text); }
+
+  /* ---------- Labs ---------- */
+  .labs-card {
+    margin-top: 32px; display: grid; gap: 20px;
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; box-shadow: var(--shadow);
+    padding: 24px;
+  }
+  @media (min-width: 900px) { .labs-card { grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 28px 32px; } }
+  .labs-card p { color: var(--text-2); max-width: 68ch; }
+  .btn-outline { color: var(--text); border-color: var(--rule); background: var(--bg); }
+  .btn-outline:hover { border-color: var(--accent-mark); }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--navy); color: var(--on-navy-2); padding: 40px 0; font-size: 15px; border-top: 1px solid var(--rule); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; align-items: center; }
+  footer a { color: var(--on-navy); }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#schedule">Skip to the schedule</a>
+
+<header class="hero">
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="./" aria-label="Data Integration, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#16273E"/><g transform="translate(16 16) scale(1.2) translate(-12 -12)" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h5l3.5 5" stroke="#B6C1D2"/><path d="M3 17h5l3.495-5" stroke="#B6C1D2"/><path d="M11.5 12h9.5M18 15l3-3-3-3" stroke="#FF9E8A"/></g></svg>
+        DIS 3.3
+      </a>
+      <nav class="topnav" aria-label="Sections">
+        <a class="section-link" href="#schedule">Schedule</a>
+        <a class="section-link" href="#project">Project</a>
+        <a class="section-link" href="#milestones">Milestones</a>
+        <a class="section-link" href="#labs">Labs</a>
+        <a class="gh" href="https://github.com/breuert/data-integration">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">DIS 3.3 · Data Integration · Winter 2026/27</p>
+        <h1>Data Integration<span class="dot">.</span></h1>
+        <p class="tagline">Many sources, one answer.</p>
+        <p class="meta"><strong>Data and Information Science</strong> · TH Köln – University of Applied Sciences</p>
+        <p class="lead">
+          This is the home of the <strong>BSc Data Integration</strong> course running in 2026/2027 at TH Köln – University of Applied Sciences.
+          The course teaches the basics of working with data-driven questions. You’ll learn how to collect data from different sources, clean it up, and organize it into useful formats.
+          From there, we’ll look at methods for exploring data and using statistics to test hypotheses.
+          You’ll also gain skills in interpreting, visualizing, and presenting results so you can answer both research-based and real-world questions.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/breuert/data-integration">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            Course repository on GitHub
+          </a>
+          <a class="btn btn-ghost" href="#schedule">Schedule and resources</a>
+        </div>
+      </div>
+
+      <aside class="next-card" id="next-card" aria-live="polite" hidden>
+        <p class="next-label" id="next-label">Up next</p>
+        <p class="next-date" id="next-date"></p>
+        <p class="next-topic" id="next-topic"></p>
+        <div class="next-links" id="next-links"></div>
+        <p class="next-milestone" id="next-milestone" hidden></p>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <section id="schedule" aria-labelledby="schedule-title">
+      <p class="kicker">Schedule</p>
+      <h2 id="schedule-title">Schedule and resources</h2>
+      <p class="section-intro">Lectures take place on Fridays. The slides open right here in your browser, and the labs are hosted in the <a href="https://github.com/breuert/data-integration/tree/main/labs">course repository</a> on GitHub.</p>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr><th scope="col" class="col-date">Date</th><th scope="col">Topic</th><th scope="col" class="col-res">Resources</th><th scope="col" class="col-ms">Milestone</th></tr>
+          </thead>
+          <tbody>
+            <tr class="session">
+              <tr class="session" data-date="2026-10-23">
+                <td class="col-date"><span class="weekday">Wed</span><span class="date">14 Oct 2026</span></td>
+                <td class="topic">Kickoff</td>
+                <td class="col-res"><div class="res-list">
+                  <a class="res" href="slides/kickoff.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                </div></td>
+                <td class="col-ms empty-ms"></td>
+              </tr>
+            </tr>
+
+            <tr class="block"><td colspan="4"><span class="block-num">Block 1 <span class="block-range">· 23 Oct – 13 Nov 2026</span></span><span class="block-title">Tools, Data, &amp; Software Engineering</span></td></tr>
+            <tr class="session" data-date="2026-10-23">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">23 Oct 2026</span></td>
+              <td class="topic">Open Source Software and Open Data</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/open_source_software_and_open_data.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/open_source_software_and_open_data.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2026-10-30">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">30 Oct 2026</span></td>
+              <td class="topic">Command Line Interface</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/command_line_interface.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/command_line_interface.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2026-11-06">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">6 Nov 2026</span></td>
+              <td class="topic">Version Control Software</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/version_control_software.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/version_control_software.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2026-11-13" data-milestone="1st milestone: Roadmap">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">13 Nov 2026</span></td>
+              <td class="topic">Agentic Coding</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/agentic_coding.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/agentic_coding.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms keep"><a class="ms" href="#milestone-1"><span class="diamond" aria-hidden="true">◆</span><span>1st milestone: Roadmap</span></a></td>
+            </tr>
+
+            <tr class="block"><td colspan="4"><span class="block-num">Block 2 <span class="block-range">· 27 Nov – 18 Dec 2026</span></span><span class="block-title">Data Engineering</span></td></tr>
+            <tr class="session" data-date="2026-11-27">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">27 Nov 2026</span></td>
+              <td class="topic">Web Scraping</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/web_scraping.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/web_scraping.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2026-12-04">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">4 Dec 2026</span></td>
+              <td class="topic">Data Structures and Formats</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/data_structures.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/data_structures.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2026-12-11">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">11 Dec 2026</span></td>
+              <td class="topic">Data Cleaning and Python Packages</td>
+              <td class="col-res"><div class="res-list res-stack">
+                <div class="res-list">
+                  <a class="res" href="slides/data_cleaning.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides <small>Cleaning</small></a>
+                  <a class="res" href="slides/data_science_packages.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides <small>Packages</small></a>
+                </div>
+                <div class="res-list">
+                  <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/data_cleaning.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab <small>Cleaning</small></a>
+                  <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/data_science_packages.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab <small>Packages</small></a>
+                </div>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2026-12-18" data-milestone="2nd milestone: Dataset">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">18 Dec 2026</span></td>
+              <td class="topic">World Café</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/world_cafe.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+              </div></td>
+              <td class="col-ms keep"><a class="ms" href="#milestone-2"><span class="diamond" aria-hidden="true">◆</span><span>2nd milestone: Dataset</span></a></td>
+            </tr>
+
+            <tr class="block"><td colspan="4"><span class="block-num">Block 3 <span class="block-range">· 8 Jan – 25 Jan 2027</span></span><span class="block-title">Data Analysis and Presentation</span></td></tr>
+            <tr class="session" data-date="2027-01-08">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">8 Jan 2027</span></td>
+              <td class="topic">Hypothesis Testing</td>
+              <td class="col-res"><div class="res-list">
+                <a class="res" href="slides/hypothesis_testing.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/hypothesis_testing.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
+              </div></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2027-01-15">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">15 Jan 2027</span></td>
+              <td class="topic">Guest Lecture</td>
+              <td class="col-res"></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2027-01-22">
+              <td class="col-date"><span class="weekday">Fri</span><span class="date">22 Jan 2027</span></td>
+              <td class="topic">Wrap Up / QA</td>
+              <td class="col-res"></td>
+              <td class="col-ms empty-ms"></td>
+            </tr>
+            <tr class="session" data-date="2027-01-25" data-milestone="3rd milestone: Presentation">
+              <td class="col-date"><span class="weekday">Mon</span><span class="date">25 Jan 2027</span></td>
+              <td class="topic">Exam</td>
+              <td class="col-res"></td>
+              <td class="col-ms keep"><a class="ms" href="#milestone-3"><span class="diamond" aria-hidden="true">◆</span><span>3rd milestone: Presentation</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="project" aria-labelledby="project-title">
+      <p class="kicker">Group project</p>
+      <h2 id="project-title">Your own data pipeline, in a team</h2>
+      <div class="project-grid">
+        <div class="project-text">
+          <p>Throughout the semester, you will collaborate with your team members and work on a group project. A shared Git repository is the technological basis to facilitate your collaboration.</p>
+          <p>Follow these steps to get started.</p>
+          <p class="note"><strong>Make sure to have everything settled before the 1st milestone</strong> on 13 Nov 2026, since your roadmap is supposed to be shared from the Git repository. More details about the group project are shared in the <a href="slides/open_source_software_and_open_data.bento.html">slides</a>.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Create a Git repository on GitHub</h3>
+            <p>Include all team members as collaborators. As a student, you are eligible to gain access to the <a href="https://education.github.com/pack">GitHub Student Developer Pack</a> that allows you to create an organization that hosts your group work (as an alternative to hosting the repository from a personal account).</p>
+          </li>
+          <li>
+            <h3>Invite <a href="https://github.com/breuert/">breuert</a> as collaborator</h3>
+            <p>Add <code>breuert</code> to your group repository.</p>
+          </li>
+          <li>
+            <h3>Send an e-mail to <a href="https://github.com/breuert/">breuert</a></h3>
+            <ul>
+              <li>your group / project name</li>
+              <li>a list of all team members including their full names, student identifiers, and their GitHub handles</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="milestones" aria-labelledby="milestones-title">
+      <p class="kicker">Milestones</p>
+      <h2 id="milestones-title">Three blocks, three milestones</h2>
+      <p class="section-intro">The lecture series can be divided into three topical blocks. Each block ends with a milestone that helps you to structure and organize the group project. Each milestone builds on the one before, so start early and commit often.</p>
+
+      <div class="ms-grid">
+        <article class="ms-card" id="milestone-1">
+          <div class="ms-head"><span class="ms-num">1st milestone</span><span class="ms-when">End of block 1</span></div>
+          <h3>Roadmap</h3>
+          <p class="ms-date">Due Fri 13 Nov 2026</p>
+          <p class="ms-summary">Your topic, your datasets and your research questions, and a plan for how you will answer them.</p>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>Topic and dataset selection, with the license of every source</li>
+            <li>Two or three research questions that your data can answer</li>
+            <li>A roadmap: your plan for the rest of the semester</li>
+          </ul>
+          <h4>Format</h4>
+          <p class="ms-format">Markdown documentation in the README of your group repository</p>
+        </article>
+
+        <article class="ms-card" id="milestone-2">
+          <div class="ms-head"><span class="ms-num">2nd milestone</span><span class="ms-when">End of block 2</span></div>
+          <h3>Dataset</h3>
+          <p class="ms-date">Due Fri 18 Dec 2026</p>
+          <p class="ms-summary">Your enriched dataset and a first version of your pipeline, presented at the World Café.</p>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>An enriched dataset that combines several sources, e.g., open data and data you scraped</li>
+            <li>A pipeline prototype (skeleton code) that builds the dataset from the raw data</li>
+            <li>Documentation: sources and licenses, cleaning steps, and a data dictionary</li>
+          </ul>
+          <h4>Format</h4>
+          <p class="ms-format">New dataset hosted online · Jupyter notebook in your repository</p>
+          <div class="ms-extra"><p><strong>+10 bonus points</strong> for passing the World Café on 18 Dec 2026.</p></div>
+        </article>
+
+        <article class="ms-card" id="milestone-3">
+          <div class="ms-head"><span class="ms-num">3rd milestone</span><span class="ms-when">Exam</span></div>
+          <h3>Presentation</h3>
+          <p class="ms-date">Mon 25 Jan 2027</p>
+          <p class="ms-summary">Your findings, presented in the exam, together with the code and documentation behind them.</p>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>Presentation of your results</li>
+            <li>Code repository and a demo of your running notebook</li>
+            <li>Project documentation</li>
+          </ul>
+          <h4>Format</h4>
+          <p class="ms-format">Exam: presentation · running notebook · open repository and documentation</p>
+          <div class="ms-extra"><p>Your repository is graded as it is at a deadline before the exam: <b>Jan 22, 2026 at 23:59 PM</b>. Later commits do not count.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="labs" aria-labelledby="labs-title">
+      <p class="kicker">Lab sessions</p>
+      <h2 id="labs-title">Practice what you learned</h2>
+      <div class="labs-card">
+        <p>Each lecture is accompanied by a lab session that helps deepen your understanding of the concepts and methodologies, and you will gain hands-on experience. You can find all labs in the corresponding GitHub repository.</p>
+        <a class="btn btn-outline" href="https://github.com/breuert/data-integration/tree/main/labs">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>
+          All labs on GitHub
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>DIS 3.3 Data Integration · Winter 2026/27 · Data and Information Science · TH Köln</p>
+    <nav aria-label="Repository">
+      <a href="https://github.com/breuert/data-integration">GitHub repository</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Mark past sessions, highlight the next one and fill the "Up next" card.
+  (function () {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var day = 24 * 60 * 60 * 1000;
+    var fmt = { weekday: "long", day: "numeric", month: "long", year: "numeric" };
+    var rows = document.querySelectorAll("tr[data-date]");
+    var next = null, nextMilestone = null;
+
+    function dateOf(row) {
+      var p = row.getAttribute("data-date").split("-");
+      return new Date(+p[0], +p[1] - 1, +p[2]);
+    }
+
+    for (var i = 0; i < rows.length; i++) {
+      var d = dateOf(rows[i]);
+      if (d < today) {
+        rows[i].classList.add("is-past");
+      } else {
+        if (!next) next = rows[i];
+        if (!nextMilestone && rows[i].hasAttribute("data-milestone")) nextMilestone = rows[i];
+      }
+    }
+    if (!next) return;
+
+    var isToday = dateOf(next).getTime() === today.getTime();
+    next.classList.add("is-next");
+    var chip = document.createElement("span");
+    chip.className = "chip";
+    chip.textContent = isToday ? "Today" : "Next";
+    next.querySelector(".topic").appendChild(chip);
+
+    document.getElementById("next-label").textContent = isToday ? "Today" : "Up next";
+    document.getElementById("next-date").textContent = dateOf(next).toLocaleDateString("en-GB", fmt);
+    document.getElementById("next-topic").textContent = next.querySelector(".topic").firstChild.textContent.trim();
+    var links = next.querySelectorAll(".res");
+    var box = document.getElementById("next-links");
+    for (var j = 0; j < links.length; j++) box.appendChild(links[j].cloneNode(true));
+
+    if (nextMilestone) {
+      var days = Math.round((dateOf(nextMilestone) - today) / day);
+      var when = days === 0 ? "today" : days === 1 ? "tomorrow" : "in " + days + " days";
+      var ms = document.getElementById("next-milestone");
+      ms.innerHTML = '<span class="diamond" aria-hidden="true">◆</span> ';
+      var strong = document.createElement("strong");
+      strong.textContent = nextMilestone.getAttribute("data-milestone");
+      ms.appendChild(strong);
+      ms.appendChild(document.createTextNode(" · " + when));
+      ms.hidden = false;
+    }
+    document.getElementById("next-card").hidden = false;
+  })();
+</script>
+</body>
+</html>
