@@ -258,7 +258,7 @@
   }
   .res:hover { border-color: var(--accent-mark); }
   .res svg { width: 15px; height: 15px; flex: none; }
-  .res .ic-slides { color: var(--accent-mark); }
+  .res .ic-slides, .res .ic-pdf { color: var(--accent-mark); }
   .res .ic-lab { color: var(--link); }
   .res small { font-weight: 500; color: var(--text-3); font-size: 13px; }
 
@@ -421,7 +421,7 @@
     <section id="schedule" aria-labelledby="schedule-title">
       <p class="kicker">Schedule</p>
       <h2 id="schedule-title">Schedule and resources</h2>
-      <p class="section-intro">Lectures take place on Fridays. The slides open right here in your browser, and the labs are hosted in the <a href="https://github.com/breuert/data-integration/tree/main/labs">course repository</a> on GitHub.</p>
+      <p class="section-intro">Lectures take place on Fridays. The slides open right here in your browser, and they are also available as PDFs to print or annotate. The labs are hosted in the <a href="https://github.com/breuert/data-integration/tree/main/labs">course repository</a> on GitHub.</p>
 
       <div class="table-card">
         <table>
@@ -433,7 +433,8 @@
               <td class="col-date"><span class="weekday">Wed</span><span class="date">14 Oct 2026</span></td>
               <td class="topic">Kickoff</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/kickoff.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/kickoff.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/kickoff.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
             </tr>
@@ -443,7 +444,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">23 Oct 2026</span></td>
               <td class="topic">Open Source Software and Open Data</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/open_source_software_and_open_data.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/open_source_software_and_open_data.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/open_source_software_and_open_data.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/open_source_software_and_open_data.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
@@ -452,7 +454,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">30 Oct 2026</span></td>
               <td class="topic">Command Line Interface</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/command_line_interface.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/command_line_interface.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/command_line_interface.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/command_line_interface.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
@@ -461,7 +464,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">6 Nov 2026</span></td>
               <td class="topic">Version Control Software</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/version_control_software.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/version_control_software.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/version_control_software.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/version_control_software.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
@@ -470,7 +474,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">13 Nov 2026</span></td>
               <td class="topic">Agentic Coding</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/agentic_coding.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/agentic_coding.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/agentic_coding.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/agentic_coding.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms keep"><a class="ms" href="#milestone-1"><span class="diamond" aria-hidden="true">◆</span><span>1st milestone: Roadmap</span></a></td>
@@ -481,7 +486,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">27 Nov 2026</span></td>
               <td class="topic">Web Scraping</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/web_scraping.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/web_scraping.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/web_scraping.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/web_scraping.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
@@ -490,7 +496,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">4 Dec 2026</span></td>
               <td class="topic">Data Structures and Formats</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/data_structures.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/data_structures.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/data_structures.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/data_structures.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
@@ -500,8 +507,12 @@
               <td class="topic">Data Cleaning and Python Packages</td>
               <td class="col-res"><div class="res-list res-stack">
                 <div class="res-list">
-                  <a class="res" href="slides/data_cleaning.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides <small>Cleaning</small></a>
-                  <a class="res" href="slides/data_science_packages.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides <small>Packages</small></a>
+                  <a class="res" href="slides/html/data_cleaning.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides <small>Cleaning</small></a>
+                  <a class="res" href="slides/html/data_science_packages.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides <small>Packages</small></a>
+                </div>
+                <div class="res-list">
+                  <a class="res" href="slides/pdf/data_cleaning.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF <small>Cleaning</small></a>
+                  <a class="res" href="slides/pdf/data_science_packages.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF <small>Packages</small></a>
                 </div>
                 <div class="res-list">
                   <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/data_cleaning.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab <small>Cleaning</small></a>
@@ -514,7 +525,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">18 Dec 2026</span></td>
               <td class="topic">World Café</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/world_cafe.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/world_cafe.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/world_cafe.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
               </div></td>
               <td class="col-ms keep"><a class="ms" href="#milestone-2"><span class="diamond" aria-hidden="true">◆</span><span>2nd milestone: Dataset</span></a></td>
             </tr>
@@ -524,7 +536,8 @@
               <td class="col-date"><span class="weekday">Fri</span><span class="date">8 Jan 2027</span></td>
               <td class="topic">Hypothesis Testing</td>
               <td class="col-res"><div class="res-list">
-                <a class="res" href="slides/hypothesis_testing.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/html/hypothesis_testing.bento.html"><svg class="ic-slides" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M8 11v2.5M5.5 14h5"/></svg>Slides</a>
+                <a class="res" href="slides/pdf/hypothesis_testing.pdf"><svg class="ic-pdf" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 1.5h-5A1.5 1.5 0 0 0 3 3v10a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V5z"/><path d="M9.5 1.5V5H13M5.75 8h4.5M5.75 11h3"/></svg>PDF</a>
                 <a class="res" href="https://github.com/breuert/data-integration/blob/main/labs/hypothesis_testing.md"><svg class="ic-lab" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 1.5h4M6.5 1.5v4.2L2.4 12.6A1.3 1.3 0 0 0 3.5 14.5h9a1.3 1.3 0 0 0 1.1-1.9L9.5 5.7V1.5"/><path d="M4.2 10h7.6"/></svg>Lab</a>
               </div></td>
               <td class="col-ms empty-ms"></td>
@@ -559,7 +572,7 @@
         <div class="project-text">
           <p>Throughout the semester, you will collaborate with your team members and work on a group project. A shared Git repository is the technological basis to facilitate your collaboration.</p>
           <p>Follow these steps to get started.</p>
-          <p class="note"><strong>Make sure to have everything settled before the 1st milestone</strong> on 13 Nov 2026, since your roadmap is supposed to be shared from the Git repository. More details about the group project are shared in the <a href="slides/open_source_software_and_open_data.bento.html">slides</a>.</p>
+          <p class="note"><strong>Make sure to have everything settled before the 1st milestone</strong> on 13 Nov 2026, since your roadmap is supposed to be shared from the Git repository. More details about the group project are shared in the <a href="slides/html/open_source_software_and_open_data.bento.html">slides</a>.</p>
         </div>
         <ol class="steps">
           <li>

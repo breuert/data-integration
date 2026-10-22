@@ -17,19 +17,19 @@
 
 | Date | Topic | Resources | Milestone |
 | --- | --- | --- | --- |
-| | Kickoff | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/kickoff.bento.html) | |
+| | Kickoff | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/kickoff.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/kickoff.pdf) | |
 | | **Tools, Data, & Software Engineering** | | |
-| 2026/10/23 | Open Source Software and Open Data | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/open_source_software_and_open_data.bento.html), [:test_tube: `Lab`](./labs/open_source_software_and_open_data.md) | |
-| 2026/10/30 | Command Line Interface | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/command_line_interface.bento.html), [:test_tube: `Lab`](./labs/command_line_interface.md) | |
-| 2026/11/06 | Version Control Software | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/version_control_software.bento.html), [:test_tube: `Lab`](./labs/version_control_software.md) | |
-| 2026/11/13 | Agentic Coding | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/agentic_coding.bento.html), [:test_tube: `Lab`](./labs/agentic_coding.md) | **1st milestone: Roadmap** |
+| 2026/10/23 | Open Source Software and Open Data | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/open_source_software_and_open_data.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/open_source_software_and_open_data.pdf), [:test_tube: `Lab`](./labs/open_source_software_and_open_data.md) | |
+| 2026/10/30 | Command Line Interface | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/command_line_interface.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/command_line_interface.pdf), [:test_tube: `Lab`](./labs/command_line_interface.md) | |
+| 2026/11/06 | Version Control Software | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/version_control_software.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/version_control_software.pdf), [:test_tube: `Lab`](./labs/version_control_software.md) | |
+| 2026/11/13 | Agentic Coding | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/agentic_coding.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/agentic_coding.pdf), [:test_tube: `Lab`](./labs/agentic_coding.md) | **1st milestone: Roadmap** |
 | | **Data Engineering** | | |
-| 2026/11/27 | Web Scraping | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/web_scraping.bento.html), [:test_tube: `Lab`](./labs/web_scraping.md) | |
-| 2026/12/04 | Data Structures and Formats | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/data_structures.bento.html), [:test_tube: `Lab`](./labs/data_structures.md) | |
-| 2026/12/11 | Data Cleaning and Python Packages | [:bar_chart: `Slides: Cleaning`](https://breuert.github.io/data-integration/slides/data_cleaning.bento.html), [:bar_chart: `Slides: Packages`](https://breuert.github.io/data-integration/slides/data_science_packages.bento.html), [:test_tube: `Lab: Cleaning`](./labs/data_cleaning.md), [:test_tube: `Lab: Packages`](./labs/data_science_packages.md) | |
-| 2026/12/18 | World Café | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/world_cafe.bento.html) | **2nd milestone: Dataset** |
+| 2026/11/27 | Web Scraping | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/web_scraping.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/web_scraping.pdf), [:test_tube: `Lab`](./labs/web_scraping.md) | |
+| 2026/12/04 | Data Structures and Formats | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/data_structures.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/data_structures.pdf), [:test_tube: `Lab`](./labs/data_structures.md) | |
+| 2026/12/11 | Data Cleaning and Python Packages | [:bar_chart: `Slides: Cleaning`](https://breuert.github.io/data-integration/slides/html/data_cleaning.bento.html), [:bar_chart: `Slides: Packages`](https://breuert.github.io/data-integration/slides/html/data_science_packages.bento.html), [:page_facing_up: `PDF: Cleaning`](https://breuert.github.io/data-integration/slides/pdf/data_cleaning.pdf), [:page_facing_up: `PDF: Packages`](https://breuert.github.io/data-integration/slides/pdf/data_science_packages.pdf), [:test_tube: `Lab: Cleaning`](./labs/data_cleaning.md), [:test_tube: `Lab: Packages`](./labs/data_science_packages.md) | |
+| 2026/12/18 | World Café | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/world_cafe.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/world_cafe.pdf) | **2nd milestone: Dataset** |
 | | **Data Analysis and Presentation** | | |
-| 2027/01/08 | Hypothesis Testing | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/hypothesis_testing.bento.html), [:test_tube: `Lab`](./labs/hypothesis_testing.md) | |
+| 2027/01/08 | Hypothesis Testing | [:bar_chart: `Slides`](https://breuert.github.io/data-integration/slides/html/hypothesis_testing.bento.html), [:page_facing_up: `PDF`](https://breuert.github.io/data-integration/slides/pdf/hypothesis_testing.pdf), [:test_tube: `Lab`](./labs/hypothesis_testing.md) | |
 | 2027/01/15 | Guest Lecture | | |
 | 2027/01/22 | Wrap Up / QA | | |
 | 2027/01/25 | Exam | | **3rd milestone: Presentation** |
