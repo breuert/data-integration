@@ -64,3 +64,8 @@ The lecture series can be divided into three topical blocks. Each block ends wit
 ## Lab sessions
 
 Each lecture is accompanied by a lab session that helps deepen your understanding of the concepts and methodologies and you will gain hands-on experience. Please refer to the table above for the invdividual lab assignments and tasks.
+
+## Guides
+
+* :electric_plug: [KI:connect as a coding agent](./docs/kiconnect.md): use the language models of KI:connect.nrw as a coding agent in VS Code. The tutorial shows you how to create an API key with your university login and connect it through Cline, Continue or VS Code’s built-in chat.
+* :books: [Software and resources](./docs/resources.md): tutorials and cheat sheets for Markdown, the command line and Git, recommended software and Python packages, open data portals, and more.
