@@ -12,6 +12,7 @@
   - [Hypothesis Testing](#hypothesis-testing)
   - [Data Science Tutorials](#data-science-tutorials)
   - [Machine Learning](#machine-learning)
+  - [Lecture Series](#lecture-series)
   - [Open data](#open-data)
   - [Software tools](#software-tools)
   - [Python packages](#python-packages)
@@ -76,6 +77,10 @@
 ## Machine Learning
 
 * [OpenML](https://www.openml.org/)
+
+## Lecture Series
+
+* [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
 
 ## Open data
 
@@ -171,4 +176,3 @@ In order to use BASH commands on Windows, you have different options. In our cas
 * https://www.cygwin.com/index.html
 * https://learn.microsoft.com/en-us/windows/wsl/about
 * https://www.virtualbox.org/
-
